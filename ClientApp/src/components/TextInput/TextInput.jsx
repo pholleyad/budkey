@@ -3,9 +3,7 @@ import "./TextInput.scss";
 
 function TextInput() {
   return (
-    <div className="text-input">
-      TextInput
-    </div>
+    <input className="text-input" />
   );
 }
 

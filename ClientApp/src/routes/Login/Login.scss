@@ -1,3 +1,9 @@
 .login {
-  color: gold;
+  display: flex;
+  justify-content: center;
+}
+
+.login__button--submit {
+  height: 40px;
+  width: 200px;
 }
