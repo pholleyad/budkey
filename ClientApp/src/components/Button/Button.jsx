@@ -4,13 +4,14 @@ import "./Button.scss";
 
 function Button({
   children,
+  className,
   onClick,
   type,
   value
 }) {
   return (
     <button
-      className="button"
+      className={`button${!!className ? ` ${className}` : ""}`}
       onClick={onClick}
       type={type}
       value={value}

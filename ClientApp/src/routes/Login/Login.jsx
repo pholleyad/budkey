@@ -9,14 +9,22 @@ function Login() {
 
   return (
     <div className="login">
-      <Form onSubmit={handleSubmit}>
-        <TextInput />
-        <TextInput />
-        <div className="login__button--submit">
-          <Button>
-            Login
-          </Button>
-        </div>
+      <h1 className="login__heading">BudKey</h1>
+      <Form className="login__form" onSubmit={handleSubmit}>
+        <TextInput
+          className="login__input"
+          placeholder="Email"
+        />
+        <TextInput
+          className="login__input"
+          placeholder="Password"
+        />
+        <Button className="login__button submit">
+          Login
+        </Button>
+        <Button className="login__button create" type="button">
+          Create Account
+        </Button>
       </Form>
     </div>
   );
