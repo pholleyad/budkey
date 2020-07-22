@@ -4,8 +4,9 @@ $inputPaddingWidth: 8px;
 .text-input {
   border: $inputBorderWidth solid skyblue;
   border-radius: $inputBorderWidth;
-  padding: 0 $inputPaddingWidth;
+  font-size: 14px;
   height: calc(30px - (2 * #{$inputBorderWidth}));
+  padding: 0 $inputPaddingWidth;
   width: calc(100% - (2 * #{$inputBorderWidth}) - (2 * #{$inputPaddingWidth}));
 
   &:focus {
