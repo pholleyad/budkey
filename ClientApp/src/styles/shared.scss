@@ -1,0 +1,37 @@
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 240px;
+}
+
+.account__button{
+  &.--submit {
+    background-color: goldenrod;
+  }
+
+  &.--toggle {
+    height: 32px;
+  }
+}
+
+.account__form {
+  width: 100%;
+
+  > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.account__heading {
+  margin: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.--sub {
+    color: skyblue;
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Form, TextInput } from '../../components';
+import { Button, Form, Link, TextInput } from '../../components';
+import "../../styles/shared.scss";
 import "./Login.scss";
 
 function Login() {
@@ -8,23 +9,25 @@ function Login() {
   }
 
   return (
-    <div className="login">
-      <h1 className="login__heading">BudKey</h1>
-      <Form className="login__form" onSubmit={handleSubmit}>
+    <div className="account">
+      <h1 className="account__heading">BudKey</h1>
+      <Form className="account__form" onSubmit={handleSubmit}>
         <TextInput
-          className="login__input"
           placeholder="Email"
         />
         <TextInput
-          className="login__input"
           placeholder="Password"
         />
-        <Button className="login__button submit">
+        <Button className="account__button --submit">
           Login
         </Button>
-        <Button className="login__button create" type="button">
-          Create Account
-        </Button>
+        <Link
+          className="account__button --toggle"
+          buttonLike
+          to="/signup"
+        >
+          Sign Up
+        </Link>
       </Form>
     </div>
   );

@@ -2,19 +2,15 @@ import React from 'react';
 import PropTypes from "prop-types";
 import "./Button.scss";
 
-function Button({
-  children,
-  className,
-  onClick,
-  type,
-  value
-}) {
+function Button(props) {
+  const { children, className } = props;
+  const classNames = ["button"];
+  if (!!className) classNames.push(className);
+
   return (
     <button
-      className={`button${!!className ? ` ${className}` : ""}`}
-      onClick={onClick}
-      type={type}
-      value={value}
+      {...props}
+      className={classNames.join(" ")}
     >
       {children}
     </button>

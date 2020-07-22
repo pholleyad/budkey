@@ -1,11 +1,15 @@
 import React from 'react';
 import "./TextInput.scss";
 
-function TextInput({ placeholder }) {
+function TextInput(props) {
+  const { className } = props;
+  const classNames = ["text-input"];
+  if (!!className) classNames.push(className);
+
   return (
     <input
-      className="text-input"
-      placeholder={placeholder}
+      {...props}
+      className={classNames.join(" ")}
     />
   );
 }

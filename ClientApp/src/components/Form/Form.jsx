@@ -1,13 +1,15 @@
 import React from 'react';
 
-function Form({ children, className, onSubmit }) {
+function Form(props) {
+  const { children, onSubmit } = props;
+
   function handleSubmit(e) {
     e.preventDefault();
     onSubmit();
   }
 
   return (
-    <form className={className} onSubmit={handleSubmit}>
+    <form {...props} onSubmit={handleSubmit}>
       {children}
     </form>
   );
